@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Mortgage Calculator</string>
+    <string name="radiobutton1">"15"</string>
+    <string name="radiobutton2">"20"</string>
+    <string name="radiobutton3">"30"</string>
+    <string name="calculate">"Calculate"</string>
+
+
+</resources>
