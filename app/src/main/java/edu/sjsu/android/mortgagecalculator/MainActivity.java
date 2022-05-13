@@ -14,8 +14,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    //Button submitButton;
     SeekBar seekBar;
     Button button;
     EditText editText;
@@ -55,11 +53,7 @@ public class MainActivity extends AppCompatActivity {
         seekBar = (SeekBar) findViewById(R.id.seekBar);
 
         // get progress value from the Seek bar
-
-
         double seekBarValue = getConvertedValue(seekBar.getProgress());
-
-
 
         annualInterest = seekBarValue;
         monthlyInterest = annualInterest / 1200;
@@ -68,20 +62,17 @@ public class MainActivity extends AppCompatActivity {
 
         // perform seek bar change listener event used for getting the progress value
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-           // double progressChangedValue = 0.0;
 
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 
 
-                //  progressChangedValue = getConvertedValue(progress);
+
                 Toast.makeText(seekBar.getContext(), "Interest Rate: " + getConvertedValue(progress),Toast.LENGTH_SHORT).show();
 
 
-                //this is the value of the monthly interest
+                //this is the value of the annual interest
                 annualInterest = getConvertedValue(progress);
-                // get progress value from the Seek bar
-               // double defaultSeekBarValue = getConvertedValue(seekBar.getProgress());
-
+                //this is the value of the monthly interest
                 monthlyInterest = annualInterest / 1200;
             }
 
@@ -94,8 +85,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-
-
 
 
 
